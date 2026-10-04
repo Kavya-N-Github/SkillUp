@@ -11,11 +11,41 @@
         <h1 class="fruits">Mango</h1>
         <p class="leaves">spinach</p>
         <p class="leaves">curry</p>
+        <p class="leaves">methi</p>
+        <p class="leaves">lentsiles</p>
 
         <script>
+            //getElementById
             const PrintTitle = document.getElementById("page-title");
             console.log(PrintTitle);
+
+            //getElementsByClassName
+            const PrintFruit = document.getElementsByClassName("fruits");
+            console.log(PrintFruit);    
+
+            const fruitsName = [...PrintFruit];
+            console.log(fruitsName["0"]);
             
+            fruitsName.push("orange");
+            console.log(fruitsName);
+
+            //getElementsByTagName
+            const eatables = document.getElementsByTagName("p");
+            console.log(eatables);
+
+            //querySelector - select first element
+            const FirstElement = document.querySelector("#page-title");
+            console.log(FirstElement);
+
+            //Accessing nth element using querySelector
+            const FruitName = document.querySelector("h1.fruits:nth-child(3)");
+            console.log(FruitName);
+
+            //querySelectorAll - select all elements
+            const leavesName = document.querySelectorAll(".leaves");
+            console.log(leavesName);
+            
+
         </script>
     </body>
 </html>
