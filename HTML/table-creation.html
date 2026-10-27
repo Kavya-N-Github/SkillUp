@@ -38,6 +38,20 @@
             </tr>
         </tbody>
     </table>
+    <script>
+        let a=0,b=1;
 
+function fibonacci(n){
+  for(let i=0;i<n;i++){
+    console.log(a);
+    let c= a+b;
+    a=b;
+    b=c;
+  
+  }
+}
+//console.log(fibonacci(10)); // gives undefined at the end bcoz function don't have any return statement and we are calling it to print therefore remove console.log here
+fibonacci(10);
+    </script>
 </body>
 </html>

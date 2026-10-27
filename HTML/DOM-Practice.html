@@ -14,6 +14,8 @@
         <p class="leaves">methi</p>
         <p class="leaves">lentsiles</p>
 
+        <h1 id="welcome">Hello World</h1>
+
         <script>
             //getElementById
             const PrintTitle = document.getElementById("page-title");
@@ -45,7 +47,35 @@
             const leavesName = document.querySelectorAll(".leaves");
             console.log(leavesName);
             
+            //----------------------------------------------------------------
+            //innerHTML
 
+            const Greetings = document.getElementById("welcome");
+            Greetings.innerHTML="<b> Hello All </b> Welcome to DOM Learning session";
+
+        </script>
+        <script>
+            function getData(dataID,getNextData){
+              setTimeout(()=>{
+                console.log("ID:",dataID);
+                if(getNextData){
+                    getNextData();
+                }
+              },2000)
+            }
+           getData(1,()=>{
+            console.log("getting 2nd ID..");
+                getData(2,()=>{
+                    console.log("getting 3rd ID ..");
+                    getData(3,()=>{
+                        console.log("getting 4th ID..");
+                        getData(4);
+                    });
+                });
+           });
+
+           //here arrow function  are the callback functions which are passed as a paramaneter(getNextData) to getDATA function
+           //so once getData is executed , Then its own getNextData() invokes the next arrow function.
         </script>
     </body>
 </html>
