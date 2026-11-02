@@ -1,0 +1,23 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Expense Tracker</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="expenseTracker">
+            <h1>Expense tracker</h1>
+            <div class="formContainer">
+                <input type="text" id="expenseName" placeholder="Enter Expense name" required/>
+                <input type="number" id="expenseAmount" placeholder="Enter Amount" required/><br/>
+                <button type="submit" id="addBtn" >Add</button><br/>
+            </div>
+            <h2>Expenses List</h2>
+            <ul id="expenseList"></ul>
+            <h4>Total = Rs.<span id="totalAmount">0</span></h4>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

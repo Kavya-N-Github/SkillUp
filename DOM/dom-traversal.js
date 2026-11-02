@@ -93,3 +93,5 @@ const child_one = document.querySelectorAll(".transaction-item");
 const child_two = document.querySelector(".transaction-item");
 const child_three = child_two.nextElementSibling; 
 console.log(child_three); //gives undefined because nextElementSibling works on individual element , not on nodelist , there queryselector shd be added
+const previous_children = child_three.previousElementSibling;
+console.log(previous_children);
